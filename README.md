@@ -2,21 +2,23 @@
 
 |  Column | Type | Options |
 | ------------ | ------- | ---------- |
-| email      | string | null: false |
-| password | string | null: false |
 | name      | string | null: false |
-| profile    | text  | null: false |
-| occupation | text | null: false |
+| nick_name    | string  | null: false |
+| occupation_id | integer | null: false |
+| position_id | integer | null: false |
+| child_gender | string | null: false |
+| child_age | string | null: false |
+| child_position_id | integer | null: false |
 
 
 ### Association
 - has_many : comments
-- has_many : prototypes, through: :comments
+- has_many : children, through: :comments
 
 
 
 
-## prototypes テーブル
+## childrenテーブル
 |  Column | Type | Options |
 | ------------ | ------- | ---------- |
 | title      | string | null: false |
@@ -29,14 +31,25 @@
 - has_many : comments
 - has_many : users, through: :comments
 
+
+## children_usersテーブル
+|  Column | Type | Options |
+| ------------ | ------- | ---------- |
+| user_id      |  references | null: false |
+| children_id   |  references | null: false |
+
+- belongs_to :users
+- belongs_to :children
+
+
 ## commentsテーブル
 
 |  Column | Type | Options |
 | ------------ | ------- | ---------- |
 | text      | text | null: false |
-| user | references | null: false |
-| prototype |  references  | -------- | 
+| user_id | references | null: false |
+| children_id |  references  | -------- | 
 
 ### Association
 - belongs_to :users
-- belongs_to :prototypes
+- belongs_to :children
