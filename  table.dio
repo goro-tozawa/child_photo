@@ -46,11 +46,11 @@
                         <mxPoint x="1140" y="770" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="70" value="" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=23;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=0;" vertex="1" parent="1">
-                    <mxGeometry x="650" y="570" width="370" height="230" as="geometry"/>
+                <mxCell id="70" value="nice_button" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=23;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=0;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="570" width="370" height="190" as="geometry"/>
                 </mxCell>
-                <mxCell id="71" value="text(text型, NOT NULL)&#10;&#10;user_id(references, NOT NULL)&#10;&#10;children_id(references, NOT NULL)&#10;&#10;belongs_to :user&#10;&#10;belongs_to :child&#10;&#10;&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=17;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="70">
-                    <mxGeometry y="30" width="370" height="200" as="geometry"/>
+                <mxCell id="71" value="user_id(references, NOT NULL)&#10;&#10;children_id(references, NOT NULL)&#10;&#10;belongs_to :user&#10;&#10;belongs_to :child&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=17;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="70">
+                    <mxGeometry y="30" width="370" height="160" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
